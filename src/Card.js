@@ -3,13 +3,12 @@ const prototypeQuestions = data.prototypeData;
 const util = require('./util');
 
 class Card {
-  constructor(cardNum, question, answers, correctAnswer) {
-    this.cardNum = cardNum;
+  constructor(id, question, answers, correctAnswer) {
+    this.id = id;
     this.question = question;
     this.answers = answers;
     this.correctAnswer = correctAnswer;
   }
-
 }
 
 module.exports = Card;
