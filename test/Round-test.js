@@ -46,18 +46,21 @@ describe('Round', function() {
 
   it('should have a method that takes a turn and moves to the next card', function() {
     round.takeTurn('sea otter');
-
     expect(round.turns).to.deep.equal(1);
     expect(round.currentCard).to.deep.equal(card2);
     expect(round.feedback).to.deep.equal('correct!');
     expect(round.incorrectGuesses).to.deep.equal([]);
 
     round.takeTurn('spleen');
-
     expect(round.turns).to.deep.equal(2);
     expect(round.currentCard).to.deep.equal(card3);
     expect(round.feedback).to.deep.equal('incorrect!');
     expect(round.incorrectGuesses).to.deep.equal([14]);
+
+    round.takeTurn('wrong answer');
+    expect(round.turns).to.deep.equal(3);
+    expect(round.feedback).to.deep.equal('incorrect!');
+    expect(round.incorrectGuesses).to.deep.equal([14, 12]);
   });
 
   it('should have a method that calculates the percent score', function() {
@@ -69,7 +72,11 @@ describe('Round', function() {
     expect(round.calculatePercentScore()).to.deep.equal(66.67);
   });
 
-  // it('should have a method that ends the round', function() {
-  //
-  // });
+  it('should have a method that ends the round', function() {
+    round.takeTurn('sea otter');
+    round.takeTurn('spleen');
+    round.takeTurn('Fitzgerald');
+
+    expect(round.endRound()).to.deep.equal('** Round over! ** You answered 66.67% of the questions correctly!');
+  });
 });
