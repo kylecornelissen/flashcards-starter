@@ -59,4 +59,17 @@ describe('Round', function() {
     expect(round.feedback).to.deep.equal('incorrect!');
     expect(round.incorrectGuesses).to.deep.equal([14]);
   });
+
+  it('should have a method that calculates the percent score', function() {
+    round.takeTurn('sea otter');
+    expect(round.calculatePercentScore()).to.deep.equal(100);
+    round.takeTurn('spleen');
+    expect(round.calculatePercentScore()).to.deep.equal(50);
+    round.takeTurn('Fitzgerald');
+    expect(round.calculatePercentScore()).to.deep.equal(66.67);
+  });
+
+  // it('should have a method that ends the round', function() {
+  //
+  // });
 });

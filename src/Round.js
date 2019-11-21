@@ -20,8 +20,12 @@ class Round {
     this.turns += 1
     this.currentCard = this.deck.cards[this.turns];
   }
-  // calculatePercentScore() {
-  //
+  calculatePercentScore() {
+    let score = (this.turns - this.incorrectGuesses.length) / this.turns * 100;
+    return +score.toFixed(2);
+  }
+  // endRound() {
+  //   ‘** Round over! ** You answered <>% of the questions correctly!’
   // }
 }
 
