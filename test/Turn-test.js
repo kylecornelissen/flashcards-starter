@@ -27,19 +27,19 @@ describe('Turn', function() {
     expect(turn.card).to.deep.equal(card);
   });
 
-  it('should have a returnGuess method that returns the guess', function() {
+  it('should have a method that returns the guess', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('guess', card);
     expect(turn.returnGuess()).to.equal('guess');
   });
 
-  it('should have a returnCard method that returns the card', function() {
+  it('should have a method that returns the card', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('guess', card);
     expect(turn.returnCard()).to.equal(card);
   });
 
-  it('should have an evaluateGuess method that returns a boolean indicating if the user guess matches the correct answer', function() {
+  it('should have a method that returns a boolean if the guess matches the answer', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turnOne = new Turn('guess', card);
     const turnTwo = new Turn('object', card);
@@ -47,7 +47,7 @@ describe('Turn', function() {
     expect(turnTwo.evaluateGuess()).to.equal(true);
   });
 
-  it('should have a giveFeedback method that returns a correct or incorrect indicating if the user guess matches the correct answer', function() {
+  it('should have a method that returns a correct/incorrect if the guess matches the answer', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turnOne = new Turn('guess', card);
     const turnTwo = new Turn('object', card);
