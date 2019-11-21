@@ -39,4 +39,24 @@ describe('Round', function() {
   it('should initialize with an incorrectGuesses property that is an empty array', function() {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
+
+  it('should have a method that returns the first card from the deck', function() {
+    expect(round.returnFirstCard()).to.deep.equal(card1);
+  });
+
+  it('should have a method that takes a turn and moves to the next card', function() {
+    round.takeTurn('sea otter');
+
+    expect(round.turns).to.deep.equal(1);
+    expect(round.currentCard).to.deep.equal(card2);
+    expect(round.feedback).to.deep.equal('correct!');
+    expect(round.incorrectGuesses).to.deep.equal([]);
+
+    round.takeTurn('spleen');
+
+    expect(round.turns).to.deep.equal(2);
+    expect(round.currentCard).to.deep.equal(card3);
+    expect(round.feedback).to.deep.equal('incorrect!');
+    expect(round.incorrectGuesses).to.deep.equal([14]);
+  });
 });
