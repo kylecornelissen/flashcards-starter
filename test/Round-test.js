@@ -40,8 +40,8 @@ describe('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-  it('should have a method that returns the first card from the deck', function() {
-    expect(round.returnFirstCard()).to.deep.equal(card1);
+  it('should have a method that returns the current card from the deck', function() {
+    expect(round.returnCurrentCard()).to.deep.equal(card1);
   });
 
   it('should have a method that takes a turn and moves to the next card', function() {
