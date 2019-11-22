@@ -10,8 +10,6 @@ This project uses a program to simulate a set of flash cards through the command
   - Implement a robust testing suite using TDD
   
 ## Technologies Used
-  - HTML
-  - CSS
   - JavaScript
   
 ## Setup
