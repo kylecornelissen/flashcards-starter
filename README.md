@@ -1,6 +1,6 @@
 # FlashCards Project
 
-This project uses a program to simulate a set of flash cards through the command line. A user will be able to see the questions, take guesses, and see a final score at the end of the round. The project breaks up objects into individual class files to demonstrate the Single Responsibility Principle (SRP) using TDD to drive the implementation of code.
+This project uses a program to simulate a set of flash cards through the command line. A user will be able to see the questions, take guesses, and see a final score at the end of the round along with the time it took them to complete the project. The project breaks up objects into individual class files to demonstrate the Single Responsibility Principle (SRP) using TDD to drive the implementation of code.
   
 ## Learning Goals
   - Contribute code to an partially constructed object-oriented application
