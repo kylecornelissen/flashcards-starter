@@ -20,4 +20,4 @@ This project uses a program to simulate a set of flash cards through the command
   - Run ```node index.js``` in your terminal command line to start the game
   
 ## Finished Result
-[gif]
+![PROJECT1_GIF](https://user-images.githubusercontent.com/46171611/69394763-33191480-0c9a-11ea-92ad-eadd2fa56e7e.gif)
