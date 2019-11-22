@@ -77,6 +77,6 @@ describe('Round', function() {
     round.takeTurn('spleen');
     round.takeTurn('Fitzgerald');
 
-    expect(round.endRound()).to.deep.equal('** Round over! ** You answered 66.67% of the questions correctly!');
+    expect(round.endRound()).to.contain('** Round over! ** You answered 66.67% of the questions correctly!');
   });
 });
